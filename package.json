@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "msw": "=0.28.2",
+    "npm": "^7.13.0",
     "regenerator-runtime": "^0.13.7"
   },
   "repository": {
