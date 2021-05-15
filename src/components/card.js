@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const Card = (article) => {
+  // Creating elements, setting them with class syntax and adding text content to each element.
   const card = document.createElement('div');
     card.classList.add('card');
   const headLine = document.createElement('div');
@@ -13,12 +14,14 @@ const Card = (article) => {
   const img = document.createElement('img');
     img.src = article.authorPhoto
   const span = document.createElement('span');
-    span.textContent = `By ${article.authorName}`
+    span.textContent = `By ${article.authorName}`;
     
+    // Appends
   card.append(headLine, author);
   author.append(imgContain, span);
   imgContain.append(img);
-
+    
+   // Event Listeners
   card.addEventListener('click', e =>{
     console.log(headLine);
   })
@@ -50,11 +53,11 @@ const cardAppender = (selector) => {
   .get(`https://lambda-times-api.herokuapp.com/articles`)
   .then((res => {
     const entryPoint = document.querySelector(selector);
-    const newCard = Object.values(res.data.articles);
+    const allCards = Object.values(res.data.articles);
     console.log(res.data.articles)
-    newCard.forEach(card => {
-      for (let i = 0; i < card.length; i++){
-        entryPoint.append(Card(card[i]))
+    allCards.forEach(value => {
+      for (let i = 0; i < value.length; i++){
+        entryPoint.append(Card(value[i]))
       }
     }) 
   }))
