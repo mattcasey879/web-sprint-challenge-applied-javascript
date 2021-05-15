@@ -76,7 +76,12 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+    The Document Object model
 2. What is an event?
+    Something that happens when a user interacts with the webpage
 3. What is an event listener?
+    Something that runs certain code upon an event
 4. Why would we convert a NodeList into an Array?
+    To use any array methods besides forEach()
 5. What is a component?
+    A block of code that is excuted when called with a function or a promise.
