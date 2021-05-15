@@ -28,7 +28,7 @@ const Header = (title, date, temp) => {
 
 const headerAppender = (selector) => {
   const parent = document.querySelector(selector);
-  parent.append(Header())
+  parent.append(Header('Lambda Project', 'May 5th 2021', 'Created by Matthew Casey'))
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
